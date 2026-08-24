@@ -1,28 +1,28 @@
 @import "tailwindcss";
 
 /* ----------------------------------------------------
- * 글로벌 CSS 변수 및 다크모드 기본 색상 정의
+ * 에메랄드빛 바다(Ocean Emerald & Cyan) 글로벌 CSS 변수
  * ---------------------------------------------------- */
 :root {
-  --background: #05070e;
-  --foreground: #f1f5f9;
+  --background: #03131e;
+  --foreground: #e0f2fe;
   
-  /* 네온 액센트 색상 */
-  --neon-purple: #8b5cf6;
-  --neon-cyan: #06b6d4;
-  --neon-pink: #ec4899;
-  --neon-emerald: #10b981;
+  /* 청량한 에메랄드 & 아쿠아 오션 색상 */
+  --ocean-emerald: #10b981;
+  --ocean-teal: #14b8a6;
+  --ocean-cyan: #06b6d4;
+  --ocean-sky: #38bdf8;
   
-  /* 카드 및 글래스모피즘 표면 색상 */
-  --card-bg: rgba(13, 18, 30, 0.75);
-  --card-border: rgba(255, 255, 255, 0.08);
-  --card-hover-border: rgba(139, 92, 246, 0.35);
+  /* 크리스탈 오션 글래스모피즘 표면 색상 */
+  --card-bg: rgba(6, 32, 50, 0.75);
+  --card-border: rgba(56, 189, 248, 0.15);
+  --card-hover-border: rgba(16, 185, 129, 0.45);
 }
 
 /* 기본 HTML 및 Body 스타일 */
 html {
   color-scheme: dark;
-  scroll-behavior: auto; /* Lenis가 스크롤을 직접 제어하므로 auto 설정 */
+  scroll-behavior: auto;
 }
 
 body {
@@ -30,33 +30,33 @@ body {
   color: var(--foreground);
   overflow-x: hidden;
   font-family: var(--font-geist-sans), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  selection-background-color: rgba(139, 92, 246, 0.3);
+  selection-background-color: rgba(16, 185, 129, 0.35);
   selection-color: #ffffff;
 }
 
 /* ----------------------------------------------------
- * 커스텀 스크롤바 디자인 (세련된 다크 네온 스타일)
+ * 커스텀 오션 스크롤바 디자인
  * ---------------------------------------------------- */
 ::-webkit-scrollbar {
   width: 8px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #05070e;
+  background: #03131e;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(180deg, rgba(139, 92, 246, 0.5), rgba(6, 182, 212, 0.5));
+  background: linear-gradient(180deg, rgba(16, 185, 129, 0.6), rgba(6, 182, 212, 0.6));
   border-radius: 9999px;
-  border: 2px solid #05070e;
+  border: 2px solid #03131e;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(180deg, rgba(139, 92, 246, 0.8), rgba(6, 182, 212, 0.8));
+  background: linear-gradient(180deg, rgba(16, 185, 129, 0.9), rgba(6, 182, 212, 0.9));
 }
 
 /* ----------------------------------------------------
- * 글래스모피즘 및 네온 시각 효과 유틸리티
+ * 크리스탈 글래스모피즘 및 에메랄드 오션 시각 효과
  * ---------------------------------------------------- */
 .glass-panel {
   background: var(--card-bg);
@@ -71,51 +71,53 @@ body {
 
 .glass-panel-hover:hover {
   border-color: var(--card-hover-border);
-  box-shadow: 0 0 30px -10px rgba(139, 92, 246, 0.25);
+  box-shadow: 0 0 30px -10px rgba(16, 185, 129, 0.35);
   transform: translateY(-2px);
 }
 
-/* 그라디언트 텍스트 효과 */
+/* 청량한 에메랄드 오션 그라디언트 텍스트 */
+.text-gradient-emerald-ocean {
+  background: linear-gradient(135deg, #34d399 0%, #38bdf8 50%, #2dd4bf 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 .text-gradient-purple-cyan {
-  background: linear-gradient(135deg, #c084fc 0%, #38bdf8 50%, #818cf8 100%);
+  background: linear-gradient(135deg, #34d399 0%, #06b6d4 50%, #60a5fa 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .text-gradient-neon {
-  background: linear-gradient(135deg, #a855f7 0%, #06b6d4 50%, #10b981 100%);
+  background: linear-gradient(135deg, #10b981 0%, #06b6d4 50%, #38bdf8 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .text-gradient-gold {
-  background: linear-gradient(135deg, #fde047 0%, #f97316 100%);
+  background: linear-gradient(135deg, #a7f3d0 0%, #38bdf8 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-/* 네온 글로우 박스 섀도우 */
-.glow-purple {
-  box-shadow: 0 0 40px -10px rgba(139, 92, 246, 0.4);
+/* 에메랄드 & 아쿠아 글로우 박스 섀도우 */
+.glow-emerald {
+  box-shadow: 0 0 40px -10px rgba(16, 185, 129, 0.45);
 }
 
 .glow-cyan {
-  box-shadow: 0 0 40px -10px rgba(6, 182, 212, 0.4);
-}
-
-.glow-emerald {
-  box-shadow: 0 0 40px -10px rgba(16, 185, 129, 0.4);
+  box-shadow: 0 0 40px -10px rgba(6, 182, 212, 0.45);
 }
 
 /* ----------------------------------------------------
- * 배경 오로라 및 펄스 키프레임 애니메이션
+ * 바다 오로라 및 물결 애니메이션 키프레임
  * ---------------------------------------------------- */
 @keyframes float {
   0%, 100% {
     transform: translateY(0px) rotate(0deg);
   }
   50% {
-    transform: translateY(-15px) rotate(1.5deg);
+    transform: translateY(-12px) rotate(1deg);
   }
 }
 
@@ -125,7 +127,7 @@ body {
     transform: scale(1);
   }
   50% {
-    opacity: 0.65;
+    opacity: 0.7;
     transform: scale(1.08);
   }
 }
@@ -139,15 +141,6 @@ body {
   }
 }
 
-@keyframes rotate-gradient {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
 .animate-float {
   animation: float 6s ease-in-out infinite;
 }
@@ -157,19 +150,15 @@ body {
 }
 
 .animate-shimmer {
-  background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.1) 50%, rgba(255,255,255,0) 100%);
+  background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.12) 50%, rgba(255,255,255,0) 100%);
   background-size: 200% 100%;
   animation: shimmer 3s infinite;
 }
 
-/* 그리드 배경 패턴 */
+/* 물결 그리드 배경 패턴 */
 .bg-grid-pattern {
   background-image: 
-    linear-gradient(to right, rgba(255, 255, 255, 0.04) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+    linear-gradient(to right, rgba(56, 189, 248, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(56, 189, 248, 0.05) 1px, transparent 1px);
   background-size: 40px 40px;
-}
-
-.bg-radial-gradient {
-  background: radial-gradient(circle at 50% 0%, rgba(139, 92, 246, 0.15) 0%, rgba(6, 182, 212, 0.05) 40%, transparent 70%);
 }
